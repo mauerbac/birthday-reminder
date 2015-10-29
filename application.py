@@ -1,6 +1,6 @@
 # Sample app demonstrating Clever's Instant Login
 # Written in Python 2.7 with the Flask Framework
-# Author: Matt Auerbach  
+# Author: Matt Auerbach
 
 from flask import Flask, request, render_template, session, redirect, url_for
 import os
@@ -139,9 +139,12 @@ def process_birthdays():
         # Find students who have the next birthday
         next_birthday_date = sorted_students[0]
 
+        # Datetime object for today's date
+        today_date_obj = datetime.datetime.strptime(today_date, '%m/%d')
+
         # Search for next birthdate
         for student_dob in sorted_students:
-            if datetime.datetime.strptime(student_dob, '%m/%d') > datetime.datetime.strptime(today_date, '%m/%d'):
+            if datetime.datetime.strptime(student_dob, '%m/%d') > today_date_obj:
                 next_birthday_date = student_dob
                 break
 
@@ -210,8 +213,7 @@ def get_basic_info(token):
         result = result.json()
     return result['data']
 
-
 if __name__ == '__main__':
-    # TODO: Set debug to false
-    application.debug = True
+    # Toggle to debug
+    application.debug = False
     application.run()
