@@ -3,4 +3,4 @@
 
 Sample app using Clever's Instant Login
 
-Visit the link site: http://birthday-reminder-dev.elasticbeanstalk.com/
+Visit the live site: http://birthday-reminder-dev.elasticbeanstalk.com/
