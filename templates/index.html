@@ -1,0 +1,59 @@
+<!doctype html>
+<head>
+   <title>Birthday Reminder</title>
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+   <link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon"/>
+   <style>
+      .tb {
+      display: table;
+      max-width:80%;
+      margin: 10px auto;
+      }
+      .tbr {
+      display: table-row;
+      }
+      .tbc {
+      display: table-cell;
+      vertical-align: middle;
+      }
+      .tb img {
+      height: 140px;
+      max-width:100%;
+      }
+   </style>
+</head>
+<body>
+   <!-- Github Ribbon -->
+   <a href="https://github.com/mauerbac/birthday-reminder"><img style="position: absolute; top: 0; right: 0; border: 0;" src="/static/img/github.png" alt="Fork me on GitHub"></a>
+   <div class="container">
+      <div class="jumbotron">
+         <center>
+            <h4 style="color:red"> {{ error }} </h4>
+            <h1>Birthday Reminder</h1>
+            <br>
+            <p class="lead">Helping teachers organize student birthdays</p>
+         </center>
+         {% if session['login'] %}
+         <h3> You are logged in </h3>
+         {{ session.name }}
+         <a href = "/logout">Logout </a>
+         <center><a class="btn btn-lg btn-success" href="{{ url_for('process_birthdays') }}" role="button">Go to App</a></center>
+         {% else %}
+         <center> <a href="{{ url }}" ><img src="/static/img/sign-in.png"></a></center>
+         {% endif %}
+         <h2>Applicaiton details: </h2>
+         <div style="font-size:16px;line-height:1.5;">
+            <ul>
+               <li>This is a sample app leveraging Clever's <a href="https://dev.clever.com/instant-login/"> Instant Login</a></li>
+               <li>It will display a table displaying birthdays in sorted order, current birthdays and the next birthday. For simplicity, if a student accesses the app they will simply be shown their own birthday. </li>
+               <li> <b> Try it out! </b> This app only works with my Sandbox district called #DEMO Chappaqua Central. To find it use the district_id: 5629bc024ed39d0100000a6c. Then use a teacher's credentials: -> username: <i>waelchi_grant</i>, password: <i>ahS9thueth </i> </li>
+               <li>View the code on <a href ="https://github.com/mauerbac/birthday-reminder"> Github </a> </li>
+               <!-- <li> Read the blog post </li> -->
+               <li> Built by <a href="https://twitter.com/mauerbac"> Matt Auerbach </a></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</body>
+</html>

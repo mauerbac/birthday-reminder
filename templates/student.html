@@ -1,0 +1,25 @@
+<!doctype html>
+<head>
+   <title>Birthday Reminder</title>
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+   <style>
+      table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      }
+      th, td {
+      padding: 5px;
+      }
+   </style>
+</head>
+<body>
+   <div class="container">
+   <div class="starter-template">
+   <h1>Birthday Reminder Planner</h1>
+   <p> Hello, {{ session.name }} <a href = "/logout">Logout </a> </p>
+   <h3><p>This application is for teacher use only. </p> 
+       <p> Your birthday is: {{ birthday }} </p>
+  </h3>
+</body>
+</html>

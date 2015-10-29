@@ -1,0 +1,52 @@
+<!doctype html>
+<head>
+   <title>Birthday Reminder</title>
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon"/>
+
+   <style>
+      table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      }
+      th, td {
+      padding: 5px;
+      }
+   </style>
+</head>
+<body>
+   <div class="container">
+      <div class="starter-template">
+         <h1>Birthday Reminder</h1>
+         <p> Hello, {{ session.name }} <a href = "/logout">Logout </a> </p>
+         <p> <b>Today's Birthdays: </b> 
+            {% if current_birthdays|length == 0 %}
+             No Birthdays Today :(
+            {% else %}
+             {{ current_birthdays }}
+            {% endif %}
+         </p>
+         <p> <b> Next Birthday: </b> {{ next_birthday }} </p>
+         <p>
+         <h3> Full List:</h3>
+         </p>
+         <table>
+            <tr>
+               <th>Date</th>
+               <th>Student</th>
+            </tr>
+            {% for dob in ordered_students %}
+            {% for student in students_data[dob] %}
+            <tr>
+               <td>{{ dob }} </td>
+               <td> {{ student[1]  }}</td>
+            </tr>
+            {% endfor %}
+            {% endfor %}
+         </table>
+      </div>
+   </div>
+   <br />
+</body>
+</html>
