@@ -10,7 +10,7 @@ import requests
 import json
 import datetime
 
-# Fill in CLIENT_ID, CLIENT_SECRET, DISTRICT_TOKEN & REDIRECT_URI
+# Fill in with your CLIENT_ID, CLIENT_SECRET, DISTRICT_TOKEN & REDIRECT_URI
 CLIENT_ID = ''
 CLIENT_SECRET = ''
 DISTRICT_TOKEN = '' # Note: This app is only compatible with this district
