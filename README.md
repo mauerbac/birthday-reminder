@@ -1,6 +1,6 @@
 # Leveraging Clever Instant Login 
 
-[Live Site](http://birthday-reminder-dev.elasticbeanstalk.com/)
+[Live Site](http://bit.ly/cleverbirthday)
 
 ## Clever's Platform
 
@@ -48,7 +48,7 @@ We are going to build an app for teachers to view student birthdays. This app wi
 
 ![Screenshot](https://s3-us-west-2.amazonaws.com/mauerbac-web-images/homepage1.png)
 
-Give it a try!  [http://birthday-reminder-dev.elasticbeanstalk.com/](http://birthday-reminder-dev.elasticbeanstalk.com/)
+Give it a try!  [http://bit.ly/cleverbirthday](http://bit.ly/cleverbirthday)
 
 - My demo district is “Demo Chappaqua Schools”. Use this district_id to find it: 5629bc024ed39d0100000a6c
 - Login as a teacher or student
