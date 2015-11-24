@@ -118,5 +118,5 @@ Lastly, check if there’s a birthday today, as well as check when the next birt
 
 ### Additional Resources:
 - [API Explorer](https://clever.com/developers/docs/explorer#api_data) - A great tool to become more familiar with the  Clever API.
-- Questions? Reach out via twitter @mauerbac 
+- Questions? Reach out via twitter [@mauerbac](https://twitter.com/mauerbac) 
 
